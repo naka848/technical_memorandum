@@ -1,5 +1,6 @@
-  - [エラーログをみる](#エラーログをみる)
-  - [autoload](#autoload)
+- [エラーログをみる](#エラーログをみる)
+- [autoload](#autoload)
+- [phpバージョン](#phpバージョン)
 
 ## エラーログをみる
 
@@ -87,17 +88,24 @@ https://carbon.nesbot.com/docs/#api-carbon-2
 Generated autoload files
 ```
 
-10. phpのバージョンを元に戻す
+10. [vscode]
+新たに作成されたファイルを確認する  
+versionに関する記述の部分は、変更点を含む範囲を選択して右クリック>Revert(元に戻す)
+
+11. [terminal]  
+phpのバージョンを元に戻す
 ```
 $ phpenv local 5.6.40
 5.6.40
 ```
 
-11. phpのバージョンを確認
+12.  [terminal]  
+phpのバージョンを確認
 ```
 $ php --version
 PHP 5.6.40 (cli) (built: May  6 2022 09:54:11) 
 ```
+
 
 ---
 
