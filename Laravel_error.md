@@ -127,6 +127,7 @@ Generated autoload files
 10. [vscode]
 新たに作成されたファイルを確認する  
 versionに関する記述の部分は、変更点を含む範囲を選択して右クリック>Revert(元に戻す)
+→最終的に残るファイル:autoload_classmap.php/autoload_static.php
 
 11. [terminal]  
 phpのバージョンを元に戻す
