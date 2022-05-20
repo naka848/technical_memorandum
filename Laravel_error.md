@@ -124,10 +124,13 @@ https://carbon.nesbot.com/docs/#api-carbon-2
 Generated autoload files
 ```
 
-10. [vscode]
+10. [vscode]  
 新たに作成されたファイルを確認する  
-versionに関する記述の部分は、変更点を含む範囲を選択して右クリック>Revert(元に戻す)
-→最終的に残るファイル:autoload_classmap.php/autoload_static.php
+- ClassLoader.php 
+  - ファイルごと変更を取り消す（Discard Changes）
+- autoload_classmap.phpとautoload_static.php  
+  - 'Composer\\InstalledVersions'に関する記述の部分が削除されてしまうので、変更点を含む範囲を選択して右クリック>Revert Selected Ranges(元に戻す)
+
 
 11. [terminal]  
 phpのバージョンを元に戻す
