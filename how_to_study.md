@@ -48,3 +48,21 @@
 
 ## 個人系まとめサイト
 - とほほのWWW入門
+
+---
+
+## Todo
+- トレロ
+  - みやすい
+- オーグモード
+  - 便利、使うの大変
+
+---
+
+## Windows全文検索
+
+- MacにはSpotlightがあるが、Windowsはどうすれば？
+- powertoys
+  - サーバーエラー
+- PDF iFilter+設定「PDF 全文検索 Windows」
+  - iFileter配布終了 
