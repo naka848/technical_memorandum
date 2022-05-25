@@ -99,3 +99,49 @@ $ tar xvf tarファイル名
 
 - ビジュアルモード
   - 範囲を選択して、その範囲に対してなにか操作を行うことができる
+
+
+## SSH サーバーの構築
+
+- [CentOS]公開鍵の作成
+$ssh-keygen -t	rsa
+
+- [CentOS]権限の変更
+$chmod 600	~/.ssh/id_rsa
+
+- [CentOS]公開鍵、秘密鍵の２個が作成されたことを確認
+[kpu0570@localhost ~]$ ls .ssh
+id_rsa  id_rsa.pub
+  
+- [ローカル]SSH接続ができることを確認
+ssh kpu0570@192.168.4.2
+
+- [CentOS]SSH接続を確認できたらローカルに戻る
+  exit
+
+- [ローカル]CentOSで作成した秘密鍵を取りだす
+  CentOSの.sshフォルダの中身をローカルのルートディレクトリ直下にコピー
+  scp kpu0570@192.168.4.2:~/.ssh ./
+
+　- scpコマンド
+  　- リモートマシンとローカルマシン、あるいはリモートマシン同士でファイルをコピーする際に使用するLinuxのコマンド
+  
+- [CentOS]SSHでサーバーに入る
+ssh kpu0570@192.168.4.2
+
+- [CentOS]ホームディレクトリの.sshフォルダ配下に「authorized_keys」ファイルを作成
+- cd ~/.ssh/
+　touch authorized_keys
+
+- [CentOS]公開鍵を「authorized_keys」ファイルへおろす
+  - cat:ファイルを連結して標準出力に出力する」 
+  - cat id_rsa.pub >> authorized_keys
+
+- [CentOS]SSH接続をぬける
+- exit
+
+- [ローカル]秘密鍵をつかって、SSH接続を行う
+ ssh -i ~/id_rsa kpu0570@192.168.4.2
+
+  - ssh [オプション] ホスト名 [コマンド]
+    - -i 秘密鍵ファイル
