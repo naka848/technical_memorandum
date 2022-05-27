@@ -8,6 +8,7 @@
   - [どのバージョンがいいの？](#どのバージョンがいいの)
     - [php](#php)
     - [node](#node)
+    - [react](#react)
   - [autoload](#autoload)
   - [Cartのsourceの編集ができない](#cartのsourceの編集ができない)
 # 共通
@@ -50,6 +51,11 @@ app>storage>logs>最新のファイル
 
 ### node
 - nodeとnpmは基本的には同じバージョンにする
+
+### react
+- 確認コマンド  
+  yarn info react | grep version:
+- Amaryllis …version: '18.1.0'
 
 ---
 
