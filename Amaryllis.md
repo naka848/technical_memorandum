@@ -69,6 +69,7 @@
 ## 環境の切替方
 
 - 以下コマンド入力
+(Windows)
 ```sh
 kpu0570@kp-2014:~/workspace/Amaryllis$ bash scripts/switchenv.sh
 
@@ -77,6 +78,10 @@ kpu0570@kp-2014:~/workspace/Amaryllis$ bash scripts/switchenv.sh
 2) dev
 3) synergy-docker
 4) exit
+```
+(Mac)
+```sh
+kpu0570@kp-2014:~/workspace/Amaryllis$ npm run switchenv
 ```
 
 1) prod　…　本番環境
