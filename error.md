@@ -11,6 +11,7 @@
     - [react](#react)
   - [autoload](#autoload)
   - [Cartのsourceの編集ができない](#cartのsourceの編集ができない)
+  - [テスト環境への接続ができなくなった](#テスト環境への接続ができなくなった)
 # 共通
 ## 深呼吸
 
@@ -187,3 +188,31 @@ kpu0570@kp-2014:~/king/kp/Source/app$ sudo chown -R www-data:www-data storage
 ```
 
 ---
+
+## テスト環境への接続ができなくなった
+
+試したこと
+- Dockerコンテナ再起動
+- ログの確認（\\wsl.localhost\Ubuntu\home\kpu0570\king\kp\Source\app\storage\logs）
+
+[2022-05-30 10:53:00] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /var/www/html/new-king/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:47
+Stack trace:
+
+  - DBへの接続がだめそうだったので、その辺を確認
+    - DBの接続をきる、再接続する（DBeaver）
+    - 「.env.local.php」ファイルを確認（VSCODE）
+      - 「DB_HOST」はAWSのRDBと一致しているか
+      - "QUEUE.TYPE" => 'sync'に変更
+
+```
+    "DB_HOST" => 'dev-db-2021-010-13.cluster-ckicgtcuqacn.ap-northeast-1.rds.amazonaws.com',
+    "DB_PORT" => 46603,
+    "DB_NAME" => 'king_db',
+    "DB_USER_NAME" => 'kp_user',
+    "DB_PASSWORD" => '694k!0s0',
+    "QUEUE.TYPE" => 'sync',
+```
+
+- PCの再起動
+  - 再起動から5分ほどして、復活した
+  - 結局理由はわからぬまま…

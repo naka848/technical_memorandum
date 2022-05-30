@@ -1,3 +1,9 @@
+## サーバーへのアクセス
+- 「Windowsキー + Rキー」
+- 名前欄にサーバーIPアドレスを入力　ex）\\192.168.2.184
+
+
+
 ActiveDirectory
 http://knowledge.core.king/projects/exclusively-system/wiki/ActiveDirectory
 
