@@ -57,6 +57,22 @@
 - 所感
   - 現場PCいっぱいある！！
   - 閉じているノートパソコンや、タブレット端末もあるので注意する
+
+- 自分のIPアドレスの確認方法
+- コマンドプロンプトにて
+```
+C:\Users\kpu0570>ipconfig
+```
+結果:ここをみる！
+```
+Ethernet adapter イーサネット:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::5bd:2097:7116:56d9%39
+   IPv4 Address. . . . . . . . . . . : 192.168.2.250
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.2.1
+```
 ---
 
 ## 課題
