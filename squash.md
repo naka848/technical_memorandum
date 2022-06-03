@@ -2,9 +2,9 @@
 
 まずgit _testで練習
 
-- 参考：https://zenn.dev/ryouhei_furugen/articles/44bc9a179764eb
-
-  　　　https://qiita.com/takke/items/3400b55becfd72769214
+参考：https://zenn.dev/ryouhei_furugen/articles/44bc9a179764eb  
+参考：https://qiita.com/takke/items/3400b55becfd72769214
+  　　　
 
 - いずれにせよ、最新のcommitまで表示されてしまうよう
 
@@ -44,11 +44,12 @@ git push -f origin master
 
 ## 離れたcommitをまとめる
 
-参考：https://kitigai.hatenablog.com/entry/2019/05/22/003841
+参考：https://kitigai.hatenablog.com/entry/2019/05/22/003841  
+参考：https://www.engilaboo.com/summarize-multiple-commits/
 
 →これでできそうかな、と思ったのだが、ファイルの中の文字列の順番が変わってしまうしcommitできなかった
 
-
+手順通り進めても、変更するファイルが多すぎてできないと言われてしまう
 
 
 
